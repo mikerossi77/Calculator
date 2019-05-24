@@ -10,17 +10,16 @@ body {
 } 
 #result {
     height: 75px; 
-    font-size: 40px;
-    background: maroon;
+    font-size: 35px;
+    /* background: maroon;
     border: maroon;
-    color: white;
+    color: white; */
 }
 
 #backing {
     background: maroon;
     width: 475px;
     padding: 20px;
-    margin: 10px;
     height: 100%;
 }
 #VT {

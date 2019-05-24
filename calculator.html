@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <script>
+        function numberClick(numberClicked) {
+            /**Very first number clicked**/
+
+            if (newNumber == true && result == 0) {
+                result = numberClicked;
+                newNumber = false;
+            }
+            /**Second number in long number**/
+            else if (newNumber == false) {
+                result = String(result) + String(numberClicked);
+            }
+            /**First Number after operation**/
+            else if (tempResult !== "null" && newNumber == true) {
+                result = numberClicked;
+                newNumber = false;
+            }
+            else if (operation == "null") {
+                result = result + numberClicked;
+            }
+            else if (tempResult == result) {
+                result = numberClicked
+            }
+            else {
+                tempResult = result;
+                result = myCalculator(tempResult, operation, result);
+                operation = "null";
+            }
+            document.getElementById('result').value = Number(result);
+        }
+
+        function operatorClick(operatorClicked) {
+
+            if (operatorClicked == "=") {
+                result = myCalculator(tempResult, operation, result);
+                newNumber = true;
+                tempResult = 0
+                operation = "null"
+            }
+            else if (operatorClicked == "clear") {
+                result = 0;
+                tempResult = 0;
+                operation = "null";
+                newNumber = true;
+            }
+            /**User cliked +,-,*,/ **/
+            /**First time operation clicked**/
+            else if (operation == "null") {
+                operation = operatorClicked;
+                newNumber = true;
+                tempResult = result;
+            }
+            else {
+                result = myCalculator(tempResult, operation, result);
+                newNumber = true;
+                tempResult = 0;
+                operation = "null";
+            }
+            document.getElementById('result').value = Number(result);
+        }
+        function myCalculator(firstNumber, operator, secondNumber) {
+
+            // console.log("in the fuction with:", x, ", ", y, ", ", z);
+            // var firstNumber = document.getElementById('firstInput').value;
+            // var operator = document.getElementById('operatorInput').value;
+            // var secondNumber = document.getElementById('secondInput').value;
+
+
+            if (operator == "+") {
+                answer = Number(firstNumber) + Number(secondNumber);
+                console.log("Addition" + firstNumber + operator + secondNumber)
+            }
+            else if (operator == "-") {
+                answer = firstNumber - secondNumber;
+                console.log("Subtraction" + firstNumber + operator + secondNumber)
+            }
+            else if (operator == "*") {
+                answer = firstNumber * secondNumber;
+                console.log("Multiply" + firstNumber + operator + secondNumber)
+            }
+            else {
+                answer = Number(firstNumber) / Number(secondNumber);
+                console.log("Divide" + firstNumber + operator + secondNumber)
+            }
+
+            document.getElementById('result').value = answer;
+            return answer;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container" id="backing">
+    <p>
+        <input type="number" id="result"></p>
+    <p>
+        <button onclick="numberClick(1)" class="btn-lg">1</button>
+        <button onclick="numberClick(2)" class="btn-lg">2</button>
+        <button onclick="numberClick(3)" class="btn-lg">3</button>
+        <button onClick="operatorClick('+')" class="btn-lg">+</button>
+    </p>
+    <p>
+        <button onclick="numberClick(4)" class="btn-lg">4</button>
+        <button onclick="numberClick(5)" class="btn-lg">5</button>
+        <button onclick="numberClick(6)" class="btn-lg">6</button>
+        <button onClick="operatorClick('-')" class="btn-lg">-</button>
+    </p>
+    <p>
+        <button onclick="numberClick(7)" class="btn-lg">7</button>
+        <button onclick="numberClick(8)" class="btn-lg">8</button>
+        <button onclick="numberClick(9)" class="btn-lg">9</button>
+        <button onClick="operatorClick('*')" class="btn-lg">*</button>
+    </p>
+    <p>
+        <button onClick="operatorClick('clear')" class="btn-lg">C</button>
+        <button onclick="numberClick(7)" class="btn-lg">0</button>
+        <button onClick="operatorClick('=')" class="btn-lg">=</button>
+        <button onClick="operatorClick('/')" class="btn-lg">/</button>
+
+
+    </p>
+</div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
+        </script>
+
+
+
+    <script>
+        var result = 0;
+        var tempResult = 0;
+        var newNumber = true;
+        var operation = "null";
+
+    </script>
+</body>
+
+</html>

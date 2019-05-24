@@ -32,12 +32,12 @@ body {
         }
     #result {
         height: 45px; 
-        font-size: 26px;
+        font-size: 23px;
         }
     #backing {
         width: 365px;
         height: 100%;
-        padding: 31px;
+        padding: 25px;
         padding-top: 200px;
     }
     #VT {

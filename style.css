@@ -20,6 +20,10 @@ body {
     margin: 10px;
     height: 100%;
 }
+#VT {
+    height:  50px; 
+    width: 425px;
+}
 @media screen and (max-width: 500px) {
     .btn-lg {
         width: 70px; 
@@ -28,12 +32,16 @@ body {
         }
     #result {
         height: 45px; 
-        font-size: 23px;
+        font-size: 26px;
         }
     #backing {
-        width: 375px;
+        width: 365px;
         height: 100%;
         padding: 31px;
         padding-top: 200px;
+    }
+    #VT {
+        height:  50px; 
+        width: 50px;
     }
 }

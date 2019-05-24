@@ -10,7 +10,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Mikalculator</title>
     <script>
         function numberClick(numberClicked) {
@@ -107,36 +107,41 @@
 
 <body>
     <div class="container" id="backing">
-        <img src="./images/VT.png" height="150px" width="425px" alt="Hokies">
-    <p>
-        <input type="number" id="result"></p>
-    <p>
-        <button onclick="numberClick(1)" class="btn-lg">1</button>
-        <button onclick="numberClick(2)" class="btn-lg">2</button>
-        <button onclick="numberClick(3)" class="btn-lg">3</button>
-        <button onClick="operatorClick('+')" class="btn-lg">+</button>
-    </p>
-    <p>
-        <button onclick="numberClick(4)" class="btn-lg">4</button>
-        <button onclick="numberClick(5)" class="btn-lg">5</button>
-        <button onclick="numberClick(6)" class="btn-lg">6</button>
-        <button onClick="operatorClick('-')" class="btn-lg">-</button>
-    </p>
-    <p>
-        <button onclick="numberClick(7)" class="btn-lg">7</button>
-        <button onclick="numberClick(8)" class="btn-lg">8</button>
-        <button onclick="numberClick(9)" class="btn-lg">9</button>
-        <button onClick="operatorClick('*')" class="btn-lg">*</button>
-    </p>
-    <p>
-        <button onClick="operatorClick('clear')" class="btn-lg">C</button>
-        <button onclick="numberClick(7)" class="btn-lg">0</button>
-        <button onClick="operatorClick('=')" class="btn-lg">=</button>
-        <button onClick="operatorClick('/')" class="btn-lg">/</button>
-
-
-    </p>
-</div>
+        <!-- <div class="row" id="VT">
+            <img src="./images/VT.png" alt="Hokies">
+        </div> -->
+        
+        <!-- <div class="row"> -->
+                <p>
+                        <input type="number" id="result"></p>
+                    <p>
+                        <button onclick="numberClick(1)" class="btn-lg">1</button>
+                        <button onclick="numberClick(2)" class="btn-lg">2</button>
+                        <button onclick="numberClick(3)" class="btn-lg">3</button>
+                        <button onClick="operatorClick('+')" class="btn-lg">+</button>
+                    </p>
+                    <p>
+                        <button onclick="numberClick(4)" class="btn-lg">4</button>
+                        <button onclick="numberClick(5)" class="btn-lg">5</button>
+                        <button onclick="numberClick(6)" class="btn-lg">6</button>
+                        <button onClick="operatorClick('-')" class="btn-lg">-</button>
+                    </p>
+                    <p>
+                        <button onclick="numberClick(7)" class="btn-lg">7</button>
+                        <button onclick="numberClick(8)" class="btn-lg">8</button>
+                        <button onclick="numberClick(9)" class="btn-lg">9</button>
+                        <button onClick="operatorClick('*')" class="btn-lg">*</button>
+                    </p>
+                    <p>
+                        <button onClick="operatorClick('clear')" class="btn-lg">C</button>
+                        <button onclick="numberClick(7)" class="btn-lg">0</button>
+                        <button onClick="operatorClick('=')" class="btn-lg">=</button>
+                        <button onClick="operatorClick('/')" class="btn-lg">/</button>
+            
+            
+                    </p>
+        <!-- </div> -->
+    </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">

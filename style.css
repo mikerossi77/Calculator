@@ -2,8 +2,7 @@
     width: 100px; 
     height: 100px; 
     font-size: 50px;
-    /* background: green;
-    color: white; */
+
 } 
 #result {
     height: 75px; 
@@ -15,4 +14,18 @@
     width: 475px;
     padding: 20px;
     margin: 10px;
+}
+@media screen and (max-width: 500px) {
+    .btn-lg {
+        width: 70px; 
+        height: 70px; 
+        font-size: 30px;
+        }
+    #result {
+        height: 45px; 
+        font-size: 26px;
+        }
+    #backing {
+        width: 375px;
+        height: 100%
 }

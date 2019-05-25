@@ -1,6 +1,6 @@
 function numberClick(numberClicked) {
+    debugger;
     /**Very first number clicked**/
-
     if (newNumber == true && result == 0) {
         result = numberClicked;
         newNumber = false;
@@ -15,12 +15,15 @@ function numberClick(numberClicked) {
         newNumber = false;
     }
     else if (operation == "null") {
+        debugger;
         result = result + numberClicked;
     }
     else if (tempResult == result) {
+        debugger;
         result = numberClicked
     }
     else {
+        debugger;
         tempResult = result;
         result = myCalculator(tempResult, operation, result);
         operation = "null";
@@ -30,30 +33,37 @@ function numberClick(numberClicked) {
 
 function operatorClick(operatorClicked) {
 
+    debugger;
     if (operatorClicked == "=") {
+        debugger;
         result = myCalculator(tempResult, operation, result);
         newNumber = true;
         tempResult = 0
         operation = "null"
+        firstOperation = true;
     }
     else if (operatorClicked == "clear") {
         result = 0;
         tempResult = 0;
         operation = "null";
         newNumber = true;
+        firstOperation = true;
     }
     /**User cliked +,-,*,/ **/
     /**First time operation clicked**/
-    else if (operation == "null") {
+    else if (firstOperation == true) {
         operation = operatorClicked;
         newNumber = true;
         tempResult = result;
+        firstOperation = false;
     }
     else {
+        // second time operator clicked, and every time after that without pressing equals
+        debugger;
         result = myCalculator(tempResult, operation, result);
         newNumber = true;
-        tempResult = 0;
-        operation = "null";
+        tempResult = result;
+        operation = operatorClicked;
     }
     document.getElementById('result').value = Number(result);
 }

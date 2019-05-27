@@ -18,42 +18,52 @@
 
 <body>
     <div class="container" id="backing">
-        <!-- <div class="row" id="VT">
-            <img src="./images/VT.png" alt="Hokies">
-        </div> -->
-        
-        <!-- <div class="row"> -->
-                <img src="./images/VT.png" id="VT" alt="Hokies">
-                <p>
-                        <input type="number" id="result"></p>
-                        
-                    <p>
-                        <button onclick="numberClick(1)" class="btn-lg">1</button>
-                        <button onclick="numberClick(2)" class="btn-lg">2</button>
-                        <button onclick="numberClick(3)" class="btn-lg">3</button>
-                        <button onClick="operatorClick('+')" class="btn-lg">+</button>
-                    </p>
-                    <p>
-                        <button onclick="numberClick(4)" class="btn-lg">4</button>
-                        <button onclick="numberClick(5)" class="btn-lg">5</button>
-                        <button onclick="numberClick(6)" class="btn-lg">6</button>
-                        <button onClick="operatorClick('-')" class="btn-lg">-</button>
-                    </p>
-                    <p>
-                        <button onclick="numberClick(7)" class="btn-lg">7</button>
-                        <button onclick="numberClick(8)" class="btn-lg">8</button>
-                        <button onclick="numberClick(9)" class="btn-lg">9</button>
-                        <button onClick="operatorClick('*')" class="btn-lg">*</button>
-                    </p>
-                    <p>
-                        <button onClick="operatorClick('clear')" class="btn-lg">C</button>
-                        <button onclick="numberClick(0)" class="btn-lg">0</button>
-                        <button onClick="operatorClick('=')" class="btn-lg">=</button>
-                        <button onClick="operatorClick('/')" class="btn-lg">/</button>
-            
-            
-                    </p>
-        <!-- </div> -->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mx-auto" style="width: 500px;">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mx-auto" id="logoBox">
+                                <div style="width: 200">
+                                    <img src="https://www.printyourbrackets.com/ncaa-logos/north-carolina-tar-heels-logo.png
+                " id="logo" alt="Hokies">
+                                </div>
+                            </div>
+                            <p>
+                                <input type="number" id="result"></p>
+
+                            <p>
+                                <button onclick="numberClick(1)" class="btn-lg">1</button>
+                                <button onclick="numberClick(2)" id="myButton" class="btn-lg">2</button>
+                                <button onclick="numberClick(3)" id="myButton" class="btn-lg">3</button>
+                                <button onClick="operatorClick('+')" id="myButton" class="btn-lg">+</button>
+                            </p>
+                            <p>
+                                <button onclick="numberClick(4)" id="myButton" class="btn-lg">4</button>
+                                <button onclick="numberClick(5)" id="myButton" class="btn-lg">5</button>
+                                <button onclick="numberClick(6)" id="myButton" class="btn-lg">6</button>
+                                <button onClick="operatorClick('-')" id="myButton" class="btn-lg">-</button>
+                            </p>
+                            <p>
+                                <button onclick="numberClick(7)" class="btn-lg">7</button>
+                                <button onclick="numberClick(8)" class="btn-lg">8</button>
+                                <button onclick="numberClick(9)" class="btn-lg">9</button>
+                                <button onClick="operatorClick('*')" class="btn-lg">*</button>
+                            </p>
+                            <p>
+                                <button onClick="operatorClick('clear')" class="btn-lg">C</button>
+                                <button onclick="numberClick(0)" class="btn-lg">0</button>
+                                <button onClick="operatorClick('=')" class="btn-lg">=</button>
+                                <button onClick="operatorClick('/')" class="btn-lg">/</button>
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
@@ -69,6 +79,17 @@
         var operation = "null";
         var firstOperation = true;  //first operation after clear or equals
         document.getElementById('result').value = 0;
+
+        document.getElementById('logo').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Virginia_Tech_Hokies_logo.svg/1280px-Virginia_Tech_Hokies_logo.svg.png";
+        document.getElementById('backing').style.background = "#74232D";
+        // document.getElementsByClassName("btn-lg")[0].style.backgroundColor = "orange";
+        // document.getElementById('myButton').style.color = "black";
+        var x = document.getElementsByClassName("btn-lg");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.backgroundColor = "orange";
+            x[i].style.color = "black";
+        }
     </script>
 </body>
 

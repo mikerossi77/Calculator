@@ -1,10 +1,5 @@
 body {
     /* background: linear-gradient(to bottom, #0af715 0%, #02380b 100%); */
     background: linear-gradient(to bottom, #f7f8f8 0%, #bebebe 100%);
-    min-height: 1400px
-}
-@media screen and (max-width: 640px) {
-    #footballPick {
-        height: 200px;
-    }
+    min-height: 1400px;
 }

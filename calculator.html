@@ -26,8 +26,7 @@
                         <div class="col-lg-12">
                             <div class="mx-auto" id="logoBox">
                                 <div style="width: 200">
-                                    <img src="https://www.printyourbrackets.com/ncaa-logos/north-carolina-tar-heels-logo.png
-                " id="logo" alt="Hokies">
+                                    <img src="https://www.printyourbrackets.com/ncaa-logos/north-carolina-tar-heels-logo.png" id="logo" alt="">
                                 </div>
                             </div>
                             <p>
@@ -78,18 +77,32 @@
         var newNumber = true;
         var operation = "null";
         var firstOperation = true;  //first operation after clear or equals
+        var calcLogo = getQueryVariable("calcLogo");
+        var calcBackgroundColor = getQueryVariable("calcBackgroundColor");
+        calcBackgroundColor = "#" + calcBackgroundColor;
+        var calcButtonColor = getQueryVariable("calcButtonColor");
+        calcButtonColor = "#" + calcButtonColor;
+        var calcTextColor = getQueryVariable("calcTextColor");
+        calcTextColor = "#" + calcTextColor;
+
         document.getElementById('result').value = 0;
 
-        document.getElementById('logo').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Virginia_Tech_Hokies_logo.svg/1280px-Virginia_Tech_Hokies_logo.svg.png";
-        document.getElementById('backing').style.background = "#74232D";
-        // document.getElementsByClassName("btn-lg")[0].style.backgroundColor = "orange";
-        // document.getElementById('myButton').style.color = "black";
+        document.getElementById('logo').src = calcLogo;
+        document.getElementById('backing').style.background = calcBackgroundColor;
+
         var x = document.getElementsByClassName("btn-lg");
         var i;
         for (i = 0; i < x.length; i++) {
-            x[i].style.backgroundColor = "orange";
-            x[i].style.color = "black";
+            x[i].style.backgroundColor = calcButtonColor;
+            x[i].style.color = calcTextColor;
         }
+
+        // document.getElementById('logo').src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Virginia_Tech_Hokies_logo.svg/1280px-Virginia_Tech_Hokies_logo.svg.png";
+        
+        // document.getElementsByClassName("btn-lg")[0].style.backgroundColor = "orange";
+        // document.getElementById('myButton').style.color = "black";
+        
+
     </script>
 </body>
 

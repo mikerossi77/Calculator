@@ -44,7 +44,7 @@ function operatorClick(operatorClicked) {
         }
         if (Id == "UCI") {
             if (result == "2019") {
-                alert("2019 - UC Irvine defeats Kansas State for first ever NCAA Tournament Game Win!")
+                alert("2019 - UC Irvine defeats Kansas State for first their ever NCAA Tournament Game Win!")
             }
         }
         if (Id == "Oso") {
@@ -57,7 +57,7 @@ function operatorClick(operatorClicked) {
         }
         if (Id == "Gonzaga") {
             if (result == "1964") {
-                alert("1964 - Herman Joseph Rossi III graduates with a BA in History.  He would go on to a long and successful career in the Department of state, and would father four ungrateful children.")
+                alert("1964 - Herman Joseph Rossi III graduates with a BA in History.  He would go on to a long and successful career in the Department of State, and would father four ungrateful children.")
             }
         }
         result = myCalculator(tempResult, operation, result);

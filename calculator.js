@@ -1,5 +1,4 @@
 function numberClick(numberClicked) {
-    debugger;
     /**Very first number clicked**/
     if (newNumber == true && result == 0) {
         result = numberClicked;
@@ -15,15 +14,12 @@ function numberClick(numberClicked) {
         newNumber = false;
     }
     else if (operation == "null") {
-        debugger;
         result = result + numberClicked;
     }
     else if (tempResult == result) {
-        debugger;
         result = numberClicked
     }
     else {
-        debugger;
         tempResult = result;
         result = myCalculator(tempResult, operation, result);
         operation = "null";
@@ -33,9 +29,17 @@ function numberClick(numberClicked) {
 
 function operatorClick(operatorClicked) {
 
-    debugger;
+    
     if (operatorClicked == "=") {
-        debugger;
+        if(result == "1982"){
+            alert("1982 - UNC freshman Michael Jordan shoots the game winning shot to give the Tarheels the National Champtionship!")
+        }
+        if(result == "2000"){
+            alert("2000 - Freshman Michael Vick leads the Virginia Tech Hokies to the National Championship game with an undefeated regular season!")
+        }
+        if(result == "2019"){
+            alert("2019 - UC Irvine defeats Kansas State for first ever NCAA Tournament Game Win!")
+        }
         result = myCalculator(tempResult, operation, result);
         newNumber = true;
         tempResult = 0
@@ -59,7 +63,6 @@ function operatorClick(operatorClicked) {
     }
     else {
         // second time operator clicked, and every time after that without pressing equals
-        debugger;
         result = myCalculator(tempResult, operation, result);
         newNumber = true;
         tempResult = result;
